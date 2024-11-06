@@ -81,38 +81,70 @@
     object-fit: cover; /* 保持图片内容的覆盖 */
     margin-top: 50px;
     }
+
+    .stylish-button {
+        
+        padding: 10px 20px; /* 按钮内边距 */
+        font-size: 16px; /* 文字大小 */
+        color: rgb(213, 215, 206); /* 文字颜色 */
+        background-color: #4779af; /* 背景颜色 */
+        border: none; /* 无边框 */
+        border-radius: 10px; /* 圆角边框 */
+        cursor: pointer; /* 鼠标悬停时显示指针 */
+        transition: background-color 0.3s; /* 背景颜色渐变效果 */
+    }
+
+        /* 鼠标悬停时的样式 */
+    .stylish-button:hover {
+        background-color: #aeb489; /* 鼠标悬停时的背景颜色 */
+    }
+
+    .italic-text {
+    font-style: italic; /* 设置字体为斜体 */
+}
+    .left-button {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px; /* 按钮内边距 */
+        font-size: 16px; /* 文字大小 */
+        color: rgb(213, 215, 206); /* 文字颜色 */
+        background-color: #4779af; /* 背景颜色 */
+        border: none; /* 无边框 */
+
+        cursor: pointer; /* 鼠标悬停时显示指针 */
+        transition: background-color 0.3s; /* 背景颜色渐变效果 */
+}
     </style>
 </head>
 <body>
     
     <header>
-        <div >
-            <img src="logo.jpg" alt="logo" width="100" height="100" class="circular-image" class="center-image-flex">
-        <div>
-        <h1 class="transparent-header"style="opacity: 1;">pin的个人网站
-        </h1>
+        <button class="left-button" id="class">我的班级</button>
+        
+        <img src="logo.jpg" alt="logo" width="100" height="100" 
+            class="circular-image" class="center-image-flex">
+        <h1 class="transparent-header"style="opacity: 1;">Pinpencil的个人页面</h1>
+        <p class="italic-text">功崇惟志，业广为勤</p>
+
+
     </header>
 
     <section id="about">
         <h2>关于我</h2>
-        <p>计科2401陈煦文的网页作业</p>
+        <p class="italic-text">陈煦文，就读于华中科技大学计算机与技术学院，2401班.</p>
+        <p class="italic-text">You can call me Pin or what something else.</p>
+        <button class="stylish-button" id="details">关于Pinpencil的更多</button>
     </section>
 
-    <!-- <section id="projects">
-        <h2>我的项目</h2>
-        <div class="project">
-            <h3>项目1</h3>
-            <p>项目1的描述...</p>
-        </div>
-        <div class="project">
-            <h3>项目2</h3>
-            <p>项目2的描述...</p>
-        </div>
-    </section> -->
+    <section id="portfolio">
+        <h2>我的作品</h2>
+        <p class="italic-text">这里是我的一些作品展示。</p>
+        <button class="stylish-button" id="paintings">查看更多</button>
+    </section>
 
     <section id="contact">
         <h2>联系方式</h2>
-        <p>3043412181@qq.com</p>
+        <p>QQmail : 3043412181@qq.com</p>
     </section>
 
     <section id="contact">
@@ -125,15 +157,25 @@
         <p>3043412181@qq.com</p>
     </section>
 
-    <section id="contact">
-        <h2>我的git</h2>
-        <p>3043412181@qq.com</p>
+    <section id="contact" style="margin: 100px;">
+        <h2>我的git仓库</h2>
+        <p>现在也许没有什么，但是说不定呢</p>
+        <a href="https://github.com/Pinpencil">https://github.com/Pinpencil</a>
     </section>
 
     <footer>
-        <p>版权所有 © 品叶</p>
+        <p> WISH YOU A NICE DAY</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        // 获取按钮元素
+        var button = document.getElementById('details');
+        // 为按钮添加点击事件监听器
+        button.addEventListener('click', function() {window.location.href = 'personal_details.html';});
+    </script>
+
+var button = document.getElementById('class');
+var button = document.getElementById('paintings');
+var button = document.getElementById('myButton');
 </body>
 </html>
